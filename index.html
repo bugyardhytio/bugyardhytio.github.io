@@ -1,46 +1,239 @@
 <!DOCTYPE html>
-<html>
-  <head>
-	<link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugyard Hytio | Urban Informatics & Geospatial Data</title>
+    <style>
+        :root {
+            --primary: #0284c7; /* Ocean/Urban blue */
+            --primary-dark: #0369a1;
+            --bg-color: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --card-bg: #ffffff;
+            --accent: #38bdf8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.05em;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--text-main);
+        }
+
+        /* Grid Layout for Career Paths */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--primary);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .edge-box {
+            background-color: #f0f9ff;
+            border-left: 3px solid var(--primary);
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: var(--primary-dark);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .edge-box strong {
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Strategy Section */
+        .strategy {
+            background-color: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .strategy-list {
+            list-style: none;
+        }
+
+        .strategy-list li {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .strategy-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .strategy-list strong {
+            color: var(--text-main);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #0f172a;
+            color: #94a3b8;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
     <header>
-    	<h1>Moh. <em>Bugy Ardhytio</em> Yusuf</h1>
-		<h2>Junior Researcher, Freelance Data Engineer</h2>
-		<h3>Moslem, Robust, Caring</h3>
+        <h1>M. Bugy Ardhytio Yusuf</h1>
+        <p>Bridging traditional urban policy with technical implementation through geospatial data science and complexity systems.</p>
     </header>
-	<main>
-		<section class="my-element">
-			<div class="side-1">Question in my head:
-				<ul>
-				<ul>Reproducibility in Planning?
-					<li>What is reproducibility and does the crisis of reproducibility also occur in planning?</li>
-					<li>Is the crisis just occur theoretically or is it can be proven empirically?</li>
-					<li>Apakah dibutuhkan konsep reprodusibilitas di perencanaan?</li>
-					<li>How could people want to reproduce a plan? And how plan can be reproduced?</li>
-					<li>Critical Mass berapa jumlah coder/scientist buat merealisasikan Collaborative Data Science buat Planning?</li>
-				</ul>
-				<ul>Artificial Intelligence
-					<li>Sudah sampai mana dan mau kemana?</ul>
-				</ul>
-			</ul>
-			</div>
-			<div class="side-1">Portfolio
-				<div class="side-1">Python Programming
-					<ul>Transforming JSON Data to CSV
-						<li><a href="Portfolio/python/json2csv_data.py">Script</a></li>
-						<li><a href="Portfolio/python/sumut.json">Data</a></li>
-					</ul>
-				</div>
-				<div class="side-2">Geographic Information System
-					<ul>
-						<li>Dummy Visualization from the Python Code + polygon decoration
-							<img src="Portfolio/gis/test.png" width="20%">
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-	</main>
-  </body>
+
+    <div class="container">
+        <h2 class="section-title">Strategic Career Trajectories</h2>
+
+        <div class="grid">
+            <!-- Role 1 -->
+            <div class="card">
+                <div class="card-icon">🌍</div>
+                <h3>Urban Data Scientist</h3>
+                <p>Translating urban data into actionable policy. Focused on smart city consultancies, municipal innovation labs, and infrastructure development agencies.</p>
+                <div class="edge-box">
+                    <strong>The Edge:</strong>
+                    Framing geospatial data not just as coordinates, but as a mechanism for modeling and executing regional development plans (RPJMD).
+                </div>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="card">
+                <div class="card-icon">⚙️</div>
+                <h3>Systems Engineer (MBSE)</h3>
+                <p>Applying Model-Based Systems Engineering to large-scale infrastructure. Building city-scale digital twin platforms and feedback loops.</p>
+                <div class="edge-box">
+                    <strong>The Edge:</strong>
+                    Translating the chaotic complexity of urban life into structured, actionable system requirements that traditional engineers often miss.
+                </div>
+            </div>
+
+            <!-- Role 3 -->
+            <div class="card">
+                <div class="card-icon">🔬</div>
+                <h3>Complexity Science Researcher</h3>
+                <p>Operating at the intersection of academia and applied policy. Working with policy think-tanks and university-affiliated labs on sustainable urban resiliency.</p>
+                <div class="edge-box">
+                    <strong>The Edge:</strong>
+                    Championing "code activism"—using technology to systematize, automate, and transparently improve the policy-making process.
+                </div>
+            </div>
+        </div>
+
+        <!-- Strategic Execution Section -->
+        <div class="strategy">
+            <h2 class="section-title" style="margin-bottom: 2rem;">Strategic Execution</h2>
+            <ul class="strategy-list">
+                <li>
+                    <strong>Emphasize Domain Knowledge:</strong> Going beyond Python and data engineering by highlighting the ability to interpret complex urban systems and act as a bridge between city planners and software engineers.
+                </li>
+                <li>
+                    <strong>Build a Proof-of-Concept Portfolio:</strong> Ingesting public policy documents (like Jakarta or West Java development plans) and translating that policy logic into technical, visual models.
+                </li>
+                <li>
+                    <strong>Network in Niche Spaces:</strong> Targeting communities dedicated to GIS, Urban Informatics, and Data for Policy rather than generalized tech spaces.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Connect on <a href="http://www.linkedin.com/in/bugyardhytio" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+		<p><a href="https://www.researchgate.net/profile/Moh-Bugy-Yusuf?ev=hdr_xprf">Research Gate</a></p>
+    </footer>
+
+</body>
 </html>
+
